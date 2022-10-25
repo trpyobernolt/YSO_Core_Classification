@@ -5,8 +5,8 @@ Created on Mon Oct 24 10:53:43 2022
 
 @author: troyobernolte
 
-This code is meant to take data from all given sources and run
-different machine learning models on this data.
+This code is meant to take data from all given sources, give them binary
+classifications, and save the file as a csv
 """
 
 import pandas as pd
@@ -121,15 +121,54 @@ X7 = dataset[['Signi070', 'Sp070', 'e_Sp070',
     
 Y7 = dataset['Coretype']
 
+#Concat all data to merge to one dataframe. Ignore index to have a discrete
+# [0, n-1] indexing
+X = pd.concat([X1, X2, X3, X4, X5, X6, X7], ignore_index=True)
+Y = pd.concat([Y1, Y2, Y3, Y4, Y5, Y6, Y7], ignore_index=True)
+Y_raw = Y.copy()
 
-X = pd.concat([X1, X2, X3, X4, X5, X6, X7])
-Y = pd.concat([Y1, Y2, Y3, Y4, Y5, Y6, Y7])
-X.to_csv('Data/inputs.csv', index=False)
-Y.to_csv('Data/outputs.csv', index=False)
+"""Original set of labels was:
+    Returns the labels of:
+        {'', 'starless', 1, 3, 2, 4, 'protostellar', '-1', '1', '3', '2', 
+         'prestellar', 0, '--', '4'}
+"""
 
+#Engineer data to binary classification
+#Setting 0 for prestellar cores and 1 for protostellar cores
 
-print(X.shape)
-print(Y.shape)
+#I am sure there is a better way to do this, but setting a list of rows to drop
+drop_list = []
+
+#Iterate over rows
+for row in range(len(Y)):
+    if isinstance(Y.iloc[row], str):
+        Y.iloc[row] = str.strip(Y.iloc[row])
+        #drop the labels that we have missing data for
+        if ( Y.iloc[row] == '' or Y.iloc[row] == '--'):
+            drop_list.append(row)
+        #Set a positive label for protostellar classification
+        elif Y.iloc[row] == 'protostellar':
+            Y.iloc[row] = 1
+        else:
+            Y.iloc[row] = 0
+    elif isinstance(Y.iloc[row], int):
+        if (Y.iloc[row] == -1):
+            drop_list.append(row)
+        if Y.iloc[row] > 2:
+            Y.iloc[row] = 1
+        else:
+            Y.iloc[row] = 0
+            
+for row in drop_list:
+    X = X.drop(row)
+    Y = Y.drop(row)
+
+#Reset the indexes to be able to easily with with data later on
+X = X.reset_index(drop=True)
+Y = Y.reset_index(drop=True)
+
+X.to_csv('Data/X_vals.csv', index=False)
+Y.to_csv('Data/Y_vals.csv', index=False)
 
 
 
