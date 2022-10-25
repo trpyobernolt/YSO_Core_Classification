@@ -12,7 +12,6 @@ Created on Mon Oct 17 17:49:45 2022
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
-from sklearn import preprocessing
 from sklearn.impute import SimpleImputer
 
 from sklearn.neural_network import MLPClassifier
@@ -20,16 +19,13 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.naive_bayes import GaussianNB
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.compose import make_column_selector as selector
 from sklearn.linear_model import Perceptron
 from sklearn import tree
 
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
-import re
 import numpy as np
 pd.options.mode.chained_assignment = None
 

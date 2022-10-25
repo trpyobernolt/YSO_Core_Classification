@@ -163,12 +163,16 @@ for row in drop_list:
     X = X.drop(row)
     Y = Y.drop(row)
 
+X = X.drop('DEJ2000', axis=1)
+X = X.drop('RAJ2000', axis=1)
+
+
 #Reset the indexes to be able to easily with with data later on
 X = X.reset_index(drop=True)
 Y = Y.reset_index(drop=True)
 
-X.to_csv('Data/X_vals.csv', index=False)
-Y.to_csv('Data/Y_vals.csv', index=False)
+X.to_csv('Data/X_vals.csv', index=True)
+Y.to_csv('Data/Y_vals.csv', index=True)
 
 
 
