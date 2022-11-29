@@ -22,79 +22,26 @@ class RawSEDData:
         
         #Cepheus
        raw1 = ['Signi70','Sp70','Sp70/Sbg70','Sconv70','Stot70','FWHMa70',
-         'FWHMb070', 'PA070', 'Signi160','Sp160',
-         'Sp160/Sbg160',
-         'Sconv160',
-         'Stot160',
-         'FWHMa160',
-         'FWHMb160',
-         'PA160',
-         'Signi250',
-         'Sp250',
-         'Sp250/Sbg250',
-         'Sconv250',
-         'Stot250',
-         'FWHMa250',
-         'FWHMb250',
-         'PA250',
-         'Signi350',
-         'Sp350',
-         'Sp350/Sbg350',
-         'Sconv350',
-         'Stot350',
-         'FWHMa350',
-         'FWHMb350',
-         'PA350',
-         'Signi500',
-         'Sp500',
-         'Sp500/Sbg500',
-         'Stot500',
-         'FWHMa500',
-         'FWHMb500',
-         'PA500',
-         'SigniNH2',
-         'NpH2',
-         'NpH2/NbgH2',
-         'NconvH2',
-         'NbgH2',
-         'FWHMaNH2',
-         'FWHMbNH2',
-         'PANH2',
-         'NSED']
+         'FWHMb070', 'PA070', 'Signi160','Sp160','Sp160/Sbg160','Sconv160',
+         'Stot160','FWHMa160','FWHMb160','PA160','Signi250','Sp250',
+         'Sp250/Sbg250','Sconv250','Stot250','FWHMa250','FWHMb250',
+         'PA250','Signi350','Sp350','Sp350/Sbg350','Sconv350','Stot350',
+         'FWHMa350','FWHMb350','PA350','Signi500','Sp500','Sp500/Sbg500',
+         'Stot500','FWHMa500','FWHMb500','PA500','SigniNH2','NpH2',
+         'NpH2/NbgH2','NconvH2','NbgH2','FWHMaNH2','FWHMbNH2','PANH2','NSED']
        
        dataset = pd.read_csv('Data/cepheus_tablea1.tsv',delimiter=';',comment='#') 
        self.X1 = dataset[raw1]
+       self.X1['Region'] = "Cepheus"
        self.Y1 = dataset['Coretype']
 
        #ophiuchus_tablea1
-       raw2 = ['Signi070',
-        'Sp070',
-        'Sp070/Sbg070',
-        'Sconv070',
-        'Stot070',
-        'FWHMa070',
-        'FWHMb070',
-        'PA070',
-        'Signi160',
-        'Sp160',
-        'Sp160/Sbg160',
-        'Sconv160',
-        'Stot160',
-        'FWHMa160',
-        'FWHMb160',
-        'PA160',
-        'Signi250',
-        'Sp250',
-        'Sp250/Sbg250',
-        'Sconv250',
-        'Stot250',
-        'FWHMa250',
-        'FWHMb250',
-        'PA250',
-        'Signi350',
-        'Sp350',
-        'Sp350/Sbg350',
-        'Sconv350',
+       raw2 = ['Signi070','Sp070', 'Sp070/Sbg070','Sconv070','Stot070',
+        'FWHMa070','FWHMb070','PA070','Signi160','Sp160','Sp160/Sbg160',
+        'Sconv160','Stot160','FWHMa160','FWHMb160','PA160','Signi250',
+        'Sp250','Sp250/Sbg250','Sconv250','Stot250','FWHMa250','FWHMb250',
+        'PA250','Signi350','Sp350',
+        'Sp350/Sbg350','Sconv350',
         'Stot350',
         'FWHMa350',
         'FWHMb350',
@@ -117,6 +64,7 @@ class RawSEDData:
         'NSED']
        dataset = pd.read_csv('Data/ophiuchus_tablea1.tsv', delimiter=';',comment='#')
        self.X2 = dataset[raw2]
+       self.X2['Region'] = "Ophiuchus"
        self.Y2 = dataset['Coretype']
        
        #taurus_table1
@@ -170,6 +118,7 @@ class RawSEDData:
         'Nsed']
        dataset = pd.read_csv('Data/taurus_table1.tsv', delimiter=';',comment='#')
        self.X3 = dataset[raw3]
+       self.X3['Region'] = "Taurus"
        self.Y3 = dataset['CType']
        
        """More work to be done here ^ """
@@ -226,6 +175,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/corona_australia_table1.tsv', delimiter=';',comment='#')
        self.X4 = dataset[raw4]
+       self.X4['Region'] = "Corona Australia"
        self.Y4 = dataset['Coretype']
     
        #lupus_tablea1
@@ -280,6 +230,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/lupus_tablea11_14.tsv', delimiter=';',comment='#')
        self.X5 = dataset[raw5]
+       self.X5['Region'] = "Lupus"
        self.Y5 = dataset['Coretype']
        
        #aquilia_table1
@@ -333,6 +284,7 @@ class RawSEDData:
         'NSED']
        dataset = pd.read_csv('Data/aquila_table1.tsv', delimiter=';',comment='#')
        self.X6 = dataset[raw6]
+       self.X6['Region'] = "Aquilia"
        self.Y6 = dataset['Coretype']
        
        #orionb_table1
@@ -387,6 +339,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/orionb_table1.tsv', delimiter=';',comment='#')
        self.X7 = dataset[raw7]
+       self.X7['Region'] = "Orion"
        self.Y7 = dataset['Coretype']
        
        #print("X Columns that are used are: ", common_elements)
@@ -406,7 +359,7 @@ class RawSEDData:
                self.Y1.iloc[row] = 2
            elif (self.Y1.iloc[row] == "starless"):
                self.Y1.iloc[row] = 1
-       print("Cepheus Y labels: ", set(self.Y1))
+       #print("Cepheus Y labels: ", set(self.Y1))
        drop_list = []
        
        #Ophiuchus Data Clearning
@@ -418,7 +371,7 @@ class RawSEDData:
                self.Y2.iloc[row] = 2
            elif (self.Y2.iloc[row] == "starless"):
                self.Y2.iloc[row] = 1
-       print("Ophiuchus Y labels: ", set(self.Y2))
+       #print("Ophiuchus Y labels: ", set(self.Y2))
        drop_list = []
        
        #Taurus Data Cleaning
@@ -430,7 +383,7 @@ class RawSEDData:
        for row in drop_list:
            self.X3 = self.X3.drop(row)
            self.Y3 = self.Y3.drop(row)
-       print("Taurus Y labels: ", set(self.Y3))
+       #print("Taurus Y labels: ", set(self.Y3))
        drop_list = []
        
        #Corona Australia Data Cleaning
@@ -448,7 +401,7 @@ class RawSEDData:
        for row in drop_list:
             self.X4 = self.X4.drop(row)
             self.Y4 = self.Y4.drop(row)
-       print("Corona Y labels: ", set(self.Y4))
+       #print("Corona Y labels: ", set(self.Y4))
        drop_list = []
        
        #Lupus Data Cleaning
@@ -460,7 +413,7 @@ class RawSEDData:
                self.Y5.iloc[row] = 2
            elif (self.Y5.iloc[row] == "starless"):
                self.Y5.iloc[row] = 1
-       print("Lupus Y labels: ", set(self.Y2))
+       #print("Lupus Y labels: ", set(self.Y2))
        drop_list = []
        
        #Aquilia Data Cleaning
@@ -472,7 +425,7 @@ class RawSEDData:
                self.Y6.iloc[row] = 2
            elif (self.Y6.iloc[row] == "starless"):
                self.Y6.iloc[row] = 1
-       print("Aquilia Y labels: ", set(self.Y2))
+       #print("Aquilia Y labels: ", set(self.Y2))
        drop_list = []
        
        #Orion-Specific Data Cleaning             
@@ -489,7 +442,7 @@ class RawSEDData:
        for row in drop_list:
             self.X7 = self.X7.drop(row)
             self.Y7 = self.Y7.drop(row)
-       print("Orion Y labels: ", set(self.Y7))
+       #print("Orion Y labels: ", set(self.Y7))
        
        frames = [self.X1, self.X2, self.X3, self.X4, self.X5, 
                       self.X6, self.X7]
@@ -503,15 +456,16 @@ class RawSEDData:
        #Reset the indexes to be able to easily deal with data later on
        X = X.reset_index(drop=True)
        Y = Y.reset_index(drop=True)
+       X['Coretype'] = Y
+       
 
-       X.to_csv('Data/X_vals.csv', index=False)
-       Y.to_csv('Data/Y_vals.csv', index=False)
-       return X, Y
+       X.to_csv('Data/all_data.csv', index=False)
+       return X
 
 def main():
    """Main class"""
-   X_data, y_data = RawSEDData().cleanData()
-   return X_data, y_data
+   all_data = RawSEDData().cleanData()
+   return all_data
 
 if __name__ == '__main__':
     main()
