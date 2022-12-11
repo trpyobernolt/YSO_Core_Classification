@@ -131,10 +131,12 @@ class Model:
         print("\nPredicted Values", self.y_predict)
         return accuracy_score(self.y_test, self.y_predict)
 
-model1 = Model("Random Forest Classifier", [preprocessing.MaxAbsScaler()])
-model1.data_engineer()
-model1.scale_data()
-model1.split_data(0.3)
-model1.run()
+#model1 = Model("Random Forest Classifier", [preprocessing.MaxAbsScaler()])
+#model1.data_engineer()
+#model1.scale_data()
+#model1.split_data(0.3)
+#model1.run()
 
+
+data = data_reader.main()
 

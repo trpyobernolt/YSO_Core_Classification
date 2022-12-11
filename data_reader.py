@@ -32,7 +32,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/cepheus_tablea1.tsv',delimiter=';',comment='#') 
        self.X1 = dataset[raw1]
-       self.X1['Region'] = "Cepheus"
+       self.X1.loc[:,'Region'] = "Cepheus"
        self.Y1 = dataset['Coretype']
 
        #ophiuchus_tablea1
@@ -64,7 +64,7 @@ class RawSEDData:
         'NSED']
        dataset = pd.read_csv('Data/ophiuchus_tablea1.tsv', delimiter=';',comment='#')
        self.X2 = dataset[raw2]
-       self.X2['Region'] = "Ophiuchus"
+       self.X2.loc[:,'Region'] = "Ophiuchus"
        self.Y2 = dataset['Coretype']
        
        #taurus_table1
@@ -118,7 +118,7 @@ class RawSEDData:
         'Nsed']
        dataset = pd.read_csv('Data/taurus_table1.tsv', delimiter=';',comment='#')
        self.X3 = dataset[raw3]
-       self.X3['Region'] = "Taurus"
+       self.X3.loc[:,'Region'] = "Taurus"
        self.Y3 = dataset['CType']
        
        """More work to be done here ^ """
@@ -175,7 +175,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/corona_australia_table1.tsv', delimiter=';',comment='#')
        self.X4 = dataset[raw4]
-       self.X4['Region'] = "Corona Australia"
+       self.X4.loc[:,'Region'] = "Corona Australia"
        self.Y4 = dataset['Coretype']
     
        #lupus_tablea1
@@ -230,7 +230,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/lupus_tablea11_14.tsv', delimiter=';',comment='#')
        self.X5 = dataset[raw5]
-       self.X5['Region'] = "Lupus"
+       self.X5.loc[:,'Region'] = "Lupus"
        self.Y5 = dataset['Coretype']
        
        #aquilia_table1
@@ -284,7 +284,7 @@ class RawSEDData:
         'NSED']
        dataset = pd.read_csv('Data/aquila_table1.tsv', delimiter=';',comment='#')
        self.X6 = dataset[raw6]
-       self.X6['Region'] = "Aquilia"
+       self.X6.loc[:,'Region'] = "Aquilia"
        self.Y6 = dataset['Coretype']
        
        #orionb_table1
@@ -339,7 +339,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/orionb_table1.tsv', delimiter=';',comment='#')
        self.X7 = dataset[raw7]
-       self.X7['Region'] = "Orion"
+       self.X7.loc[:,'Region'] = "Orion"
        self.Y7 = dataset['Coretype']
        
        #print("X Columns that are used are: ", common_elements)
