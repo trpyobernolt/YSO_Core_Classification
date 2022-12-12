@@ -139,6 +139,8 @@ class MLModels:
 
   #Method to utilize saved algorithms instead of rerunning GridSearch
   def utilizeBest(self):
+    """Change to reutrn a dictionary with the model and its accuracy.
+    """
     best_list = []
     for algo in self.algorithms.keys():
         myAlgo = self.loadAlgo(algo)
@@ -180,6 +182,9 @@ def evaluate():
     myMachine = MLModels(cleaner.X, cleaner.Y) 
     myMachine.splitTestTrain(0.3)
     myMachine.utilizeBest()
+    
+def accuracy():
+    
     
     
     

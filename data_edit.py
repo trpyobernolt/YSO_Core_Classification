@@ -68,7 +68,10 @@ class Data_Cleaner:
     def data_fill(self):
         #Train inputer for columns with missing vales
         #Should be run after data clean
-        """Found missing values with df.isnull().sum()"""
+        """Found missing values with df.isnull().sum()
+        
+        
+        JUST PUT IN 0 INSTEAD OF THE DATA INPUTER"""
         
         missing_values = ['Signi70', 'FWHMa70', 'FWHMb070', 'FWHMb070', 'PA070', "FWHMa160",
                       'FWHMa160', 'FWHMb160', 'PA160', 'FWHMa250', 'FWHMb250', 'PA250',
@@ -84,6 +87,7 @@ class Data_Cleaner:
         
 
     def plot_hist(self):
+        #Should save to file
         for col in self.df.columns:
             plt.figure()
             plt.hist(self.df[col])
@@ -97,7 +101,22 @@ class Data_Cleaner:
             print(f'\nSummary of dataframe scaled with {scaler}:')
             self.X = pd.DataFrame(self.X)
             print(self.X.describe)
+            
+    def plot_heatmap(self):
+        self.df.heat_map()
+        
+        
+def main():
+    #One main function to do your plotting and description
+    clean = Data_Cleaner(['quantileTransform'])
+    #clean.plot_hist()
+    clean.plot_heatmap()
+        
+if __name__ == '__main__':
+    main()    
 
+    
+    
     
     
     
