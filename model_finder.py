@@ -139,9 +139,12 @@ class MLModels:
 
   #Method to utilize saved algorithms instead of rerunning GridSearch
   def utilizeBest(self):
+    best_list = []
     for algo in self.algorithms.keys():
-      myAlgo = self.loadAlgo(algo)
-      self.classifyData(algo, myAlgo)
+        myAlgo = self.loadAlgo(algo)
+        self.classifyData(algo, myAlgo)
+        best_list.append(myAlgo)
+    return best_list
 
   #saves algorithms as .joblib files
   def saveAlgo(self, algoName, algorithm):
@@ -154,6 +157,14 @@ class MLModels:
     saveFile = open(self.savePath + algoName + '.joblib', 'rb')
     loadedAlgo = load(saveFile)
     return loadedAlgo
+
+  def returnBest(self):
+    best = []
+    for algo in self.algorithms.keys():
+        best.append(self.algo)
+    return best
+
+
 
 
 
@@ -169,6 +180,9 @@ def evaluate():
     myMachine = MLModels(cleaner.X, cleaner.Y) 
     myMachine.splitTestTrain(0.3)
     myMachine.utilizeBest()
+    
+    
+    
 
 
 
