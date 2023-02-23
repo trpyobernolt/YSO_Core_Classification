@@ -16,6 +16,10 @@ def main():
     list_best = myMachine.utilizeBest()
     return list_best
 
+def GraphBest():
+    best_list = main()
+    
+
 if __name__ == '__main__':
     main()
         

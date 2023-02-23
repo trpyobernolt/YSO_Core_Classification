@@ -43,6 +43,7 @@ class Data_Cleaner:
         self.X = self.df.drop(['Coretype', 'Region'], axis=1)
         self.Y = self.df['Coretype']
         self.scale(scalers)
+        self.df.to_csv('Data/clean_data.csv', index=False)
         
     def data_clean(self):
         """Cleans data. Should be run before anything else"""
@@ -110,7 +111,7 @@ def main():
     #One main function to do your plotting and description
     clean = Data_Cleaner(['quantileTransform'])
     #clean.plot_hist()
-    clean.plot_heatmap()
+    #clean.plot_heatmap()
         
 if __name__ == '__main__':
     main()    

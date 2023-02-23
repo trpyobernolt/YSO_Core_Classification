@@ -136,17 +136,22 @@ class MLModels:
 
       # Evaluate label (subsets) accuracy
       print(f'Overall Accuracy of {algoName}: {accuracy_score(self.y_test, self.y_pred)}\n')
+      
+  def getResults(self, algoName):
+      return classification_report(self.y_test, self.y_pred)
 
   #Method to utilize saved algorithms instead of rerunning GridSearch
   def utilizeBest(self):
     """Change to reutrn a dictionary with the model and its accuracy.
     """
     best_list = []
+    class_reports = []
     for algo in self.algorithms.keys():
         myAlgo = self.loadAlgo(algo)
         self.classifyData(algo, myAlgo)
         best_list.append(myAlgo)
-    return best_list
+        class_reports.append(self.getResults(myAlgo))
+    return best_list, class_reports
 
   #saves algorithms as .joblib files
   def saveAlgo(self, algoName, algorithm):
@@ -183,16 +188,3 @@ def evaluate():
     myMachine.splitTestTrain(0.3)
     myMachine.utilizeBest()
     
-def accuracy():
-    
-    
-    
-    
-
-
-
-
-
-
-
-
