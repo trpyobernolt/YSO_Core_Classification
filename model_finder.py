@@ -88,18 +88,20 @@ class MLModels:
 
 
   ##constructor method assigns X and Y data to be utilized by algorithms
-  def __init__(self, X, Y):
+  def __init__(self, X, Y, savePath = "Data/Optimized Classifiers/"):
     self.x = X
     self.y = Y
+    self.savePath = savePath
 
   ##method splits the data into a training set and testing set based on parameter
   def splitTestTrain(self, ratio):
+    savePath = self.savePath
     #split data and print shape of train and test sets
-    self.x_train, self.x_test, self.y_train, self.y_test = train_test_split(self.x, self.y, test_size = ratio)
-    print(f'Shape of original Dataframe: {self.x.shape} {self.y.shape} \n\
-    Shape of training data: {self.x_train.shape} {self.y_train.shape} \n\
-    Shape of testing data: {self.x_test.shape} {self.y_test.shape}')
-
+    self.x_train, self.x_test, self.y_train, self.y_test = train_test_split(self.x, self.y, test_size = ratio, random_state=400)
+    self.x_train.to_csv(f'{savePath}xtrain', index=True)
+    self.x_test.to_csv(f'{savePath}xtest', index=True)
+    self.y_train.to_csv(f'{savePath}ytrain', index=True)
+    self.y_test.to_csv(f'{savePath}ytest', index=True)
 
   #Method utilizes Scikitlearns GridSearchCV object to construct best parameters settings for any given classification algorithm
   def findBestParams(self):
@@ -172,19 +174,4 @@ class MLModels:
     return best
 
 
-
-
-
-
-def train():
-    cleaner = data_edit.Data_Cleaner(['quantileTransform'])
-    myMachine = MLModels(cleaner.X, cleaner.Y) 
-    myMachine.splitTestTrain(0.3)
-    myMachine.findBestParams()
-    
-def evaluate():
-    cleaner = data_edit.Data_Cleaner(['quantileTransform'])
-    myMachine = MLModels(cleaner.X, cleaner.Y) 
-    myMachine.splitTestTrain(0.3)
-    myMachine.utilizeBest()
     

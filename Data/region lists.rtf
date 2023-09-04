@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red199\green203\blue211;\red52\green54\blue66;}
+{\*\expandedcolortbl;;\cssrgb\c81961\c83529\c85882;\cssrgb\c26667\c27451\c32941;}
+\margl1440\margr1440\vieww16500\viewh16960\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 results_list_Cepheus = []\
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""\
+results_list_Cepheus.append(["NB", 0.62, 0.60, 0.47, 0.60])\
+results_list_Cepheus.append(["Perceptron", 0.64, 0.65, 0.63, 0.65])\
+results_list_Cepheus.append(["SVM", 0.68, 0.64, 0.56, 0.64])\
+results_list_Cepheus.append(["SGD", 0.65, 0.67, 0.65, 0.67])\
+results_list_Cepheus.append(["Passive Aggressive", 0.57, 0.51, 0.51, 0.51])\
+results_list_Cepheus.append(["LinearDisc", 0.62, 0.63, 0.59, 0.63])\
+results_list_Cepheus.append(["QuadDisc", 0.15, 0.33, 0.21, 0.33])\
+results_list_Cepheus.append(["KNN", 0.69, 0.70, 0.70, 0.70])\
+results_list_Cepheus.append(["DeciscionTree", 0.78, 0.77, 0.75, 0.77])\
+res_df_Cepheus = pd.DataFrame(results_list_Cepheus, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 results_list_Ophiuchus = []\
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""\
+results_list_Ophiuchus.append(["NB", 0.74, 0.73, 0.65, 0.73])\
+results_list_Ophiuchus.append(["Perceptron", 0.73, 0.72, 0.72, 0.72])\
+results_list_Ophiuchus.append(["SVM", 0.82, 0.81, 0.78, 0.81])\
+results_list_Ophiuchus.append(["SGD", 0.78, 0.76, 0.74, 0.76])\
+results_list_Ophiuchus.append(["Passive Aggressive", 0.77, 0.51, 0.52, 0.51])\
+results_list_Ophiuchus.append(["LinearDisc", 0.76, 0.75, 0.72, 0.75])\
+results_list_Ophiuchus.append(["QuadDisc", 0.07, 0.21, 0.09, 0.21])\
+results_list_Ophiuchus.append(["KNN", 0.66, 0.49, 0.48, 0.49])\
+results_list_Ophiuchus.append(["DecisionTree", 0.76, 0.78, 0.76, 0.78])\
+res_df_Ophiuchus = pd.DataFrame(results_list_Ophiuchus, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+results_list_Taurus = []\
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""\
+results_list_Taurus.append(["NB", 0.78, 0.88, 0.83, 0.8831168831168831])\
+results_list_Taurus.append(["Perceptron", 0.81, 0.78, 0.79, 0.7792207792207793])\
+results_list_Taurus.append(["SVM", 0.88, 0.90, 0.87, 0.8961038961038961])\
+results_list_Taurus.append(["SGD", 0.83, 0.77, 0.79, 0.7662337662337663])\
+results_list_Taurus.append(["Passive Aggressive", 0.85, 0.53, 0.60, 0.5324675324675324])\
+results_list_Taurus.append(["LinearDisc", 0.82, 0.85, 0.83, 0.8506493506493507])\
+results_list_Taurus.append(["QuadDisc", 0.01, 0.10, 0.02, 0.1038961038961039])\
+results_list_Taurus.append(["KNN", 0.89, 0.64, 0.70, 0.6363636363636364])\
+results_list_Taurus.append(["DecisionTree", 0.93, 0.92, 0.92, 0.922077922077922])\
+res_df_Taurus = pd.DataFrame(results_list_Taurus, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])\
+\
+results_list_Corona_Australis = []\
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""\
+results_list_Corona_Australis.append(["NB", 0.84, 0.82, 0.77, 0.82])\
+results_list_Corona_Australis.append(["Perceptron", 0.78, 0.79, 0.77, 0.79])\
+results_list_Corona_Australis.append(["SVM", 0.74, 0.82, 0.77, 0.82])\
+results_list_Corona_Australis.append(["SGD", 0.89, 0.88, 0.87, 0.88])\
+results_list_Corona_Australis.append(["Passive Aggressive", 0.78, 0.55, 0.57, 0.55])\
+results_list_Corona_Australis.append(["LinearDisc", 0.94, 0.94, 0.94, 0.94])\
+results_list_Corona_Australis.append(["QuadDisc", 0.04, 0.12, 0.06, 0.12])\
+results_list_Corona_Australis.append(["KNN", 0.75, 0.67, 0.68, 0.67])\
+results_list_Corona_Australis.append(["DecisionTree", 0.80, 0.88, 0.84, 0.88])\
+res_df_Corona_Australis = pd.DataFrame(results_list_Corona_Australis, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 results_list_Lupus = []\
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""\
+results_list_Lupus.append(["NB", 0.63, 0.75, 0.64, 0.75])\
+results_list_Lupus.append(["Perceptron", 0.68, 0.72, 0.68, 0.72])\
+results_list_Lupus.append(["SVM", 0.63, 0.74, 0.65, 0.74])\
+results_list_Lupus.append(["SGD", 0.65, 0.73, 0.66, 0.73])\
+results_list_Lupus.append(["Passive Aggressive", 0.69, 0.50, 0.55, 0.50])\
+results_list_Lupus.append(["LinearDisc", 0.64, 0.74, 0.66, 0.74])\
+results_list_Lupus.append(["QuadDisc", 0.41, 0.19, 0.07, 0.19])\
+results_list_Lupus.append(["KNN", 0.75, 0.66, 0.66, 0.66])\
+results_list_Lupus.append(["DecisionTree", 0.75, 0.78, 0.75, 0.78])\
+res_df_Lupus = pd.DataFrame(results_list_Lupus, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 results_list_Aquilia = []\
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""\
+results_list_Aquilia.append(["NB", 0.45, 0.35, 0.21, 0.35])\
+results_list_Aquilia.append(["Perceptron", 0.55, 0.48, 0.47, 0.48])\
+results_list_Aquilia.append(["SVM", 0.51, 0.43, 0.35, 0.43])\
+results_list_Aquilia.append(["SGD", 0.63, 0.56, 0.53, 0.56])\
+results_list_Aquilia.append(["Passive Aggressive", 0.57, 0.56, 0.51, 0.56])\
+results_list_Aquilia.append(["LinearDisc", 0.59, 0.49, 0.47, 0.49])\
+results_list_Aquilia.append(["QuadDisc", 0.38, 0.51, 0.43, 0.51])\
+results_list_Aquilia.append(["KNN", 0.61, 0.60, 0.47, 0.60])\
+results_list_Aquilia.append(["DeciscionTree", 0.66, 0.73, 0.69, 0.73])\
+res_df_Aquilia = pd.DataFrame(results_list_Aquilia, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 results_list_Orion = []\
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""\
+results_list_Orion.append(["NB", 0.68, 0.60, 0.49, 0.60])\
+results_list_Orion.append(["Perceptron", 0.64, 0.66, 0.64, 0.66])\
+results_list_Orion.append(["SVM", 0.69, 0.68, 0.63, 0.68])\
+results_list_Orion.append(["SGD", 0.65, 0.68, 0.66, 0.68])\
+results_list_Orion.append(["Passive Aggressive", 0.62, 0.55, 0.52, 0.55])\
+results_list_Orion.append(["LinearDisc", 0.69, 0.67, 0.64, 0.67])\
+results_list_Orion.append(["QuadDisc", 0.31, 0.39, 0.25, 0.39])\
+results_list_Orion.append(["KNN", 0.71, 0.69, 0.68, 0.69])\
+results_list_Orion.append(["DecisionTree", 0.77, 0.79, 0.77, 0.79])\
+res_df_Orion = pd.DataFrame(results_list_Orion, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

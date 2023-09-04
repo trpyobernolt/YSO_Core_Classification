@@ -1,0 +1,91 @@
+results_list_Cepheus_Unbalanced = []
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""
+results_list_Cepheus_Unbalanced.append(["NB", 0.45, 0.61, 0.47, 0.61])
+results_list_Cepheus_Unbalanced.append(["Perceptron", 0.79, 0.77, 0.76, 0.77])
+results_list_Cepheus_Unbalanced.append(["SVM", 0.82, 0.81, 0.78, 0.81])
+results_list_Cepheus_Unbalanced.append(["SGD", 0.8, 0.78, 0.77, 0.78])
+results_list_Cepheus_Unbalanced.append(["PassiveAggressive", 0.78, 0.75, 0.74, 0.75])
+results_list_Cepheus_Unbalanced.append(["LinearDisc", 0.84, 0.8, 0.78, 0.8])
+results_list_Cepheus_Unbalanced.append(["QuadDisc", 0.77, 0.61, 0.67, 0.61])
+results_list_Cepheus_Unbalanced.append(["KNN", 0.72, 0.75, 0.7, 0.75])
+results_list_Cepheus_Unbalanced.append(["DeciscionTree", 0.78, 0.78, 0.77, 0.78])
+res_df_Cepheus_Unbalanced = pd.DataFrame(results_list_Cepheus_Unbalanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_Ophiuchus_Unbalanced = []
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""
+results_list_Ophiuchus_Unbalanced.append(["NB", 0.57, 0.71, 0.61, 0.71])
+results_list_Ophiuchus_Unbalanced.append(["Perceptron", 0.8, 0.81, 0.79, 0.81])
+results_list_Ophiuchus_Unbalanced.append(["SVM", 0.72, 0.77, 0.71, 0.77])
+results_list_Ophiuchus_Unbalanced.append(["SGD", 0.82, 0.81, 0.8, 0.81])
+results_list_Ophiuchus_Unbalanced.append(["PassiveAggressive", 0.86, 0.85, 0.84, 0.85])
+results_list_Ophiuchus_Unbalanced.append(["LinearDisc", 0.81, 0.81, 0.78, 0.81])
+results_list_Ophiuchus_Unbalanced.append(["QuadDisc", 0.78, 0.82, 0.78, 0.82])
+results_list_Ophiuchus_Unbalanced.append(["KNN", 0.74, 0.77, 0.71, 0.77])
+results_list_Ophiuchus_Unbalanced.append(["DeciscionTree", 0.86, 0.82, 0.83, 0.82])
+res_df_Ophiuchus_Unbalanced = pd.DataFrame(results_list_Ophiuchus_Unbalanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_Taurus_Unbalanced = []
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""
+results_list_Taurus_Unbalanced.append(["NB", 0.78, 0.88, 0.83, 0.88])
+results_list_Taurus_Unbalanced.append(["Perceptron", 0.86, 0.9, 0.87, 0.9])
+results_list_Taurus_Unbalanced.append(["SVM", 0.88, 0.92, 0.89, 0.92])
+results_list_Taurus_Unbalanced.append(["SGD", 0.88, 0.88, 0.86, 0.88])
+results_list_Taurus_Unbalanced.append(["PassiveAggressive", 0.91, 0.85, 0.86, 0.85])
+results_list_Taurus_Unbalanced.append(["LinearDisc", 0.92, 0.95, 0.93, 0.95])
+results_list_Taurus_Unbalanced.append(["QuadDisc", 0.86, 0.86, 0.86, 0.86])
+results_list_Taurus_Unbalanced.append(["KNN", 0.78, 0.88, 0.83, 0.88])
+results_list_Taurus_Unbalanced.append(["DeciscionTree", 0.92, 0.89, 0.9, 0.89])
+res_df_Taurus_Unbalanced = pd.DataFrame(results_list_Taurus_Unbalanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_Corona Australis_Unbalanced = []
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""
+results_list_Corona Australis_Unbalanced.append(["NB", 0.65, 0.76, 0.69, 0.76])
+results_list_Corona Australis_Unbalanced.append(["Perceptron", 0.73, 0.79, 0.75, 0.79])
+results_list_Corona Australis_Unbalanced.append(["SVM", 0.67, 0.79, 0.72, 0.79])
+results_list_Corona Australis_Unbalanced.append(["SGD", 0.81, 0.78, 0.78, 0.78])
+results_list_Corona Australis_Unbalanced.append(["PassiveAggressive", 0.78, 0.84, 0.8, 0.84])
+results_list_Corona Australis_Unbalanced.append(["LinearDisc", 0.8, 0.81, 0.78, 0.81])
+results_list_Corona Australis_Unbalanced.append(["QuadDisc", 0.08, 0.18, 0.1, 0.18])
+results_list_Corona Australis_Unbalanced.append(["KNN", 0.58, 0.72, 0.64, 0.72])
+results_list_Corona Australis_Unbalanced.append(["DeciscionTree", 0.83, 0.73, 0.76, 0.73])
+res_df_Corona Australis_Unbalanced = pd.DataFrame(results_list_Corona Australis_Unbalanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_Lupus_Unbalanced = []
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""
+results_list_Lupus_Unbalanced.append(["NB", 0.58, 0.75, 0.65, 0.75])
+results_list_Lupus_Unbalanced.append(["Perceptron", 0.79, 0.83, 0.79, 0.83])
+results_list_Lupus_Unbalanced.append(["SVM", 0.72, 0.8, 0.74, 0.8])
+results_list_Lupus_Unbalanced.append(["SGD", 0.77, 0.74, 0.72, 0.74])
+results_list_Lupus_Unbalanced.append(["PassiveAggressive", 0.85, 0.81, 0.81, 0.81])
+results_list_Lupus_Unbalanced.append(["LinearDisc", 0.78, 0.84, 0.79, 0.84])
+results_list_Lupus_Unbalanced.append(["QuadDisc", 0.79, 0.83, 0.79, 0.83])
+results_list_Lupus_Unbalanced.append(["KNN", 0.7, 0.82, 0.75, 0.82])
+results_list_Lupus_Unbalanced.append(["DeciscionTree", 0.86, 0.82, 0.82, 0.82])
+res_df_Lupus_Unbalanced = pd.DataFrame(results_list_Lupus_Unbalanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_Aquilia_Unbalanced = []
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""
+results_list_Aquilia_Unbalanced.append(["NB", 0.24, 0.35, 0.21, 0.35])
+results_list_Aquilia_Unbalanced.append(["Perceptron", 0.6, 0.6, 0.55, 0.6])
+results_list_Aquilia_Unbalanced.append(["SVM", 0.4, 0.57, 0.44, 0.57])
+results_list_Aquilia_Unbalanced.append(["SGD", 0.58, 0.53, 0.49, 0.53])
+results_list_Aquilia_Unbalanced.append(["PassiveAggressive", 0.65, 0.58, 0.57, 0.58])
+results_list_Aquilia_Unbalanced.append(["LinearDisc", 0.76, 0.74, 0.73, 0.74])
+results_list_Aquilia_Unbalanced.append(["QuadDisc", 0.75, 0.72, 0.71, 0.72])
+results_list_Aquilia_Unbalanced.append(["KNN", 0.59, 0.59, 0.58, 0.59])
+results_list_Aquilia_Unbalanced.append(["DeciscionTree", 0.72, 0.7, 0.69, 0.7])
+res_df_Aquilia_Unbalanced = pd.DataFrame(results_list_Aquilia_Unbalanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_Orion_Unbalanced = []
+"""Results take the form of: [Name, Precision, Recall, F1, Accuracy]"""
+results_list_Orion_Unbalanced.append(["NB", 0.53, 0.58, 0.45, 0.58])
+results_list_Orion_Unbalanced.append(["Perceptron", 0.75, 0.74, 0.73, 0.74])
+results_list_Orion_Unbalanced.append(["SVM", 0.79, 0.76, 0.73, 0.76])
+results_list_Orion_Unbalanced.append(["SGD", 0.67, 0.66, 0.62, 0.66])
+results_list_Orion_Unbalanced.append(["PassiveAggressive", 0.76, 0.7, 0.7, 0.7])
+results_list_Orion_Unbalanced.append(["LinearDisc", 0.78, 0.74, 0.71, 0.74])
+results_list_Orion_Unbalanced.append(["QuadDisc", 0.77, 0.73, 0.71, 0.73])
+results_list_Orion_Unbalanced.append(["KNN", 0.73, 0.72, 0.69, 0.72])
+results_list_Orion_Unbalanced.append(["DeciscionTree", 0.82, 0.79, 0.8, 0.79])
+res_df_Orion_Unbalanced = pd.DataFrame(results_list_Orion_Unbalanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+

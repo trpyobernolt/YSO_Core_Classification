@@ -1,0 +1,7 @@
+Cepheus: 0.838
+Ophiuchus: 1.085
+Taurus: 2.861
+Corona Australis: 1.069
+Lupus: 1.721
+Aquilia: 0.041
+Orion: 0.574

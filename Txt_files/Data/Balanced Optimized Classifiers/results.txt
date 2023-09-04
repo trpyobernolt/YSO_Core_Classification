@@ -1,0 +1,90 @@
+------------------------------------
+NB
+Accuracy: 0.72
+Precision: 0.78
+Recall: 0.72
+F1: 0.68
+------------------------------------
+------------------------------------
+Perceptron
+Accuracy: 0.86
+Precision: 0.87
+Recall: 0.86
+F1: 0.86
+------------------------------------
+------------------------------------
+SVM
+Accuracy: 0.89
+Precision: 0.89
+Recall: 0.89
+F1: 0.89
+------------------------------------
+------------------------------------
+SGD
+Accuracy: 0.87
+Precision: 0.88
+Recall: 0.87
+F1: 0.87
+------------------------------------
+------------------------------------
+PassiveAggressive
+Accuracy: 0.82
+Precision: 0.86
+Recall: 0.82
+F1: 0.82
+------------------------------------
+------------------------------------
+LinearDisc
+Accuracy: 0.88
+Precision: 0.89
+Recall: 0.88
+F1: 0.88
+------------------------------------
+------------------------------------
+QuadDisc
+Accuracy: 0.81
+Precision: 0.82
+Recall: 0.81
+F1: 0.81
+------------------------------------
+------------------------------------
+KNN
+Accuracy: 0.86
+Precision: 0.87
+Recall: 0.86
+F1: 0.86
+------------------------------------
+------------------------------------
+DeciscionTree
+Accuracy: 0.78
+Precision: 0.78
+Recall: 0.78
+F1: 0.78
+------------------------------------
+results_list_balanced.append(["NB", 0.72, 0.78, 0.72, 0.68])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["Perceptron", 0.86, 0.87, 0.86, 0.86])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["SVM", 0.89, 0.89, 0.89, 0.89])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["SGD", 0.88, 0.89, 0.88, 0.88])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["PassiveAggressive", 0.82, 0.84, 0.82, 0.81])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["LinearDisc", 0.88, 0.89, 0.88, 0.88])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["QuadDisc", 0.81, 0.82, 0.81, 0.81])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["KNN", 0.86, 0.87, 0.86, 0.86])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+
+results_list_balanced.append(["DeciscionTree", 0.78, 0.79, 0.78, 0.78])
+res_df_balanced = pd.DataFrame(results_list_balanced, columns=['Name', 'Precision', 'Recall', 'F1', 'Accuracy'])
+

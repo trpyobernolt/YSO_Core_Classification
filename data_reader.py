@@ -175,7 +175,7 @@ class RawSEDData:
        
        dataset = pd.read_csv('Data/corona_australia_table1.tsv', delimiter=';',comment='#')
        self.X4 = dataset[raw4]
-       self.X4.loc[:,'Region'] = "Corona Australia"
+       self.X4.loc[:,'Region'] = "Corona Australis"
        self.Y4 = dataset['Coretype']
     
        #lupus_tablea1
@@ -192,10 +192,10 @@ class RawSEDData:
         'Sp160/Sbg160',
         'Sconv160',
         'Stot160',
+        'Sig250',
         'FWHMa160',
         'FWHMb160',
         'PA160',
-        'Sig250',
         'Sp250',
         'Sp250/Sbg250',
         'Sconv250',
